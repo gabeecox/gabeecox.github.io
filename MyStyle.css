@@ -1,0 +1,489 @@
+/* =========================
+   RESET
+========================= */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   GLOBAL BODY
+========================= */
+body {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(20, 20, 20);
+  line-height: 1.6;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+  background-color: black;
+  padding: 18px 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 14px;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #c8c8c8;
+}
+
+/* =========================
+   HEADINGS + TEXT
+========================= */
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 44px;
+  margin: 25px 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+p {
+  text-align: center;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-size: 22px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero-image {
+  background-image: url("AerialPics.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 54px;
+}
+
+/* =========================
+   CONTAINERS (GENERAL)
+========================= */
+.container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: rgb(10, 10, 10);
+  border: 1px solid white;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  font-size: 18px;
+  background: black;
+  color: white;
+  border: 1px solid white;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+/* Focus effect */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 2px solid white;
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 20px;
+  font-weight: bold;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #cccccc;
+}
+
+/* Errors + success messages */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+#successMsg {
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* =========================
+   RESUME PAGE STYLE
+========================= */
+main {
+  background-color: white;
+  color: black;
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 60px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.08);
+  border-radius: 4px;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
+}
+
+main p {
+  color: black;
+  text-align: center;
+  font-size: 19px;
+  margin: 10px 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+/* spacing below hero section */
+.intro-text {
+  max-width: 900px;
+  margin: 60px auto 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.intro-text p {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+/* gallery spacing */
+.gallery {
+  max-width: 1000px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 25px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 0 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border: 1px solid white;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+}
+
+/* =========================
+   HOMEPAGE OVERRIDES
+   (forces fluid layout)
+========================= */
+
+.home-page {
+  color: white;
+}
+
+/* stop resume rules from affecting homepage text */
+.home-page p,
+.home-page h2,
+.home-page h1 {
+  color: white;
+  text-align: center;
+}
+
+/* ensure homepage never gets boxed styling */
+.home-page {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* FORCE CLEAN FLAT BACKGROUND (removes faint lines/gradients) */
+body, html {
+  background: rgb(20, 20, 20) !important;
+}
+
+/* remove any accidental borders or shadows */
+* {
+  box-shadow: none !important;
+}
+
+hr {
+  display: none !important;
+}
+
+/* FORCE HOMEPAGE FONT (override resume styling) */
+.home-page,
+.home-page p,
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+  font-family: 'Trebuchet MS', Arial, sans-serif !important;
+  color: white;
+}
+
+/* PROJECTS PAGE */
+.projects-page {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  color: white;
+}
+
+.projects-intro {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.project-card {
+  max-width: 1100px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border: 1px solid white;
+}
+
+.project-info {
+  text-align: center;
+  padding: 25px 10px;
+}
+
+.project-info h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.project-info p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* PROJECTS PAGE */
+
+.projects-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.project-section {
+  margin-bottom: 80px;
+}
+
+.project-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.project-section p {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Gallery Grid */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* IMAGE SIZE FIX */
+.project-gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid white;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* =========================
+   PROJECTS PAGE OVERRIDE
+========================= */
+
+.projects-page {
+  background: transparent !important;
+  color: white !important;
+  max-width: 1200px !important;
+  width: 100%;
+  margin: 0 auto !important;
+  padding: 40px 20px !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  font-family: 'Trebuchet MS', Arial, sans-serif !important;
+}
+
+/* force text white */
+.projects-page h1,
+.projects-page h2,
+.projects-page h3,
+.projects-page p {
+  color: white !important;
+}
+
+/* make project sections fluid */
+.project-section {
+  background: transparent;
+  margin-bottom: 90px;
+  padding: 0;
+}
+
+/* keep images clean */
+.project-gallery img {
+  border: 1px solid white;
+}
+
+/* =========================
+   TABLET (<= 900px)
+========================= */
+@media (max-width: 900px) {
+
+  .gallery-grid,
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery img {
+    height: 280px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   MOBILE (<= 600px)
+========================= */
+@media (max-width: 600px) {
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  .intro-text p,
+  .projects-intro p {
+    font-size: 18px;
+  }
+
+  .project-gallery img,
+  .gallery-grid img {
+    height: 220px;
+  }
+
+  .project-section {
+    margin-bottom: 70px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
