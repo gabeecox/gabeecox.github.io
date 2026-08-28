@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Me</title>
+
+<link rel="stylesheet" href="MyStyle3.css">
+
+</head>
+
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="Index3.html">Home</a></li>
+                    <li><a href="Projects.html">My Work</a></li>
+                    <li><a href="Resume3.html">My Resume</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<h1>Contact Me</h1>
+</header>
+
+<div class="container">
+
+<form id="contactForm">
+
+<label for="name">Name:</label>
+<input type="text" id="name">
+
+<span class="error" id="nameError"></span>
+
+<label for="email">Email:</label>
+<input type="text" id="email">
+
+<span class="error" id="emailError"></span>
+
+<label for="reason">Reason for Contact:</label>
+<select id="reason">
+<option value="">Select One</option>
+<option value="Business">Business</option>
+<option value="School">School</option>
+<option value="Other">Other</option>
+</select>
+
+<span class="error" id="reasonError"></span>
+
+<label for="message">Message:</label>
+<textarea id="message"></textarea>
+
+<span class="error" id="messageError"></span>
+
+<button type="submit">Send</button>
+
+</form>
+
+<p id="successMsg"></p>
+
+</div>
+
+<script src="Script.js"></script>
+<footer>
+    <p>&copy; 2026 Gabe Cox</p>
+</footer>
+</body>
+</html>
